@@ -43,8 +43,9 @@ map.on('load', function() {
             // update source data
             var desc = document.getElementById("description");
             var title = document.getElementById("title");
+            var link = document.getElementById("titlelink");
             map.getSource('locations').setData(json);
-            console.log(map.getSource('locations'))
+
             // add new markers
             json.features.forEach(function(marker) {
 
@@ -60,6 +61,8 @@ map.on('load', function() {
                     };
                     desc.innerHTML = marker.properties.extract;
                     title.innerHTML= marker.properties.title;
+                    link.href = "https://en.wikipedia.org/wiki/" + marker.properties.title.replace(" ", "_");
+
                     el.id = "active-marker";
                 });
               

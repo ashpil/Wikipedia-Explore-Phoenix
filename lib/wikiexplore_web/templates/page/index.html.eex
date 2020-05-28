@@ -6,7 +6,7 @@
     Get Articles in Area
   </button>
   <div id=text>
-    <a target="_blank" id="titlelink">
+    <a target="_blank" id="titlelink" href="/">
       <h2 id="title">
         How to use
       </h2>
