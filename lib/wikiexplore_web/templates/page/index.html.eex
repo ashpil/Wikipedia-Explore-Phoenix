@@ -1,0 +1,21 @@
+<div id="info">
+  <h1 id="logo">
+    Explore Wikipedia
+  </h1>
+  <button id="button">
+    Get Articles in Area
+  </button>
+  <div id=text>
+    <a target="_blank" id="titlelink">
+      <h2 id="title">
+        How to use
+      </h2>
+    </a>
+    <p id="credit">
+      From Wikipedia, the free encyclopedia
+    </p>
+    <p id="description">
+      Find an area you want to know more about, then click "Get Articles in Area" above to find out what's around.
+    </p>
+  </div>
+</div>
