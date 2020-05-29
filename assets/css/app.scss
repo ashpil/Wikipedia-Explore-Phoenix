@@ -2,92 +2,115 @@
 @import "./variables";
 
 body {
-  margin: 0;
+    margin: 0;
 
-  display: grid;
-  grid-template-columns: $sidebar-size auto;
-  grid-template-rows: 100vh;
-  grid-template-areas: "info map";
+    display: grid;
+    grid-template-columns: $sidebar-size auto;
+    grid-template-rows: 100vh;
 
-  #info {
-      padding: 0 $spacing-small;
-      height: 100vh;
-      overflow: auto;
-      direction: rtl;
+    #info {
+        padding: 0 $spacing-small;
+        overflow: auto;
+        direction: rtl;
+        grid-area: 1 / 1 / 1 / 1;
 
-      * {
-          direction: ltr;
-      }
+        * {
+            direction: ltr;
+        }
 
-      h1,
-      h2 {
-          font-family: Georgia, serif;
-      }
-      #logo {
-          text-align: center;
-          font-size: 28px;
-      }
+        h1,
+        h2 {
+            font-family: Georgia, serif;
+        }
+        #logo {
+            text-align: center;
+            font-size: 28px;
+        }
 
-      #titlelink {
-          text-decoration: none;
-          color: black;
-      }
-      #button {
-          width: 100%;
-          padding: $spacing-small;
-          background-color: #cedff2;
-          border: 1px solid #a3b0bf;
-          font-family: Arial, sans-serif;
-          font-size: 18px;
-          cursor: pointer;
-          transition: background-color 0.4s;
-          font-size: 20px;
+        #titlelink, #logo a {
+            text-decoration: none;
+            color: black;
+        }
+        #button {
+            width: 100%;
+            padding: $spacing-small;
+            background-color: #cedff2;
+            border: 1px solid #a3b0bf;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.4s;
+            font-size: 20px;
 
-          &:hover {
-              background-color: #dee9f6;
-          }
+            &:hover {
+                background-color: #dee9f6;
+            }
 
-          &:active {
-              background-color: #afcbea;
-          }
-      }
+            &:active {
+                background-color: #afcbea;
+            }
+        }
 
-      #text {
-          padding: $spacing-smaller;
-          #title {
-              border-bottom: 1px solid #a2a9b1;
-              font-size: 24px;
-              font-weight: 400;
-              line-height: 1.3;
-              margin: $spacing-smaller 0 0 0;
-          }
-          #credit {
-              font-size: 0.7rem;
-          }
+        #text {
+            padding: $spacing-smaller;
+            #title {
+                border-bottom: 1px solid #a2a9b1;
+                font-size: 24px;
+                font-weight: 400;
+                line-height: 1.3;
+                margin: $spacing-smaller 0 0 0;
+            }
+            #credit {
+                font-size: 0.7rem;
+            }
 
-          p {
-              font-family: Arial, sans-serif;
-              font-size: 14px;
-              line-height: 1.6;
-              margin: $spacing-smaller 0;
-          }
-      }
-  }
+            p {
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+                margin: $spacing-smaller 0;
+            }
+        }
+    }
 
-  #map {
-      .marker {
-          background-image: url("/images/icon.svg");
-          background-size: cover;
-          width: 30px;
-          height: 30px;
-          border-radius: 50%;
-          cursor: pointer;
-      }
+    #map {
+        grid-column: 2;
+        .marker {
+            background-image: url("/images/icon.svg");
+            background-size: cover;
+            width: 1.7rem;
+            height: 1.7rem;
+            border-radius: 50%;
+            cursor: pointer;
+        }
 
-      #active-marker { 
-          -webkit-filter: invert(100%);
-          filter: invert(100%);
-          box-shadow: inset 0px 0px 1px 0px #4C4C4C;
-      }
-  }
+        #active-marker {
+            -webkit-filter: invert(100%);
+            filter: invert(100%);
+            box-shadow: inset 0px 0px 1px 0px #4c4c4c;
+        }
+    }
+}
+
+@media only screen and (max-width: 2*$sidebar-size) {
+    body {
+        display: initial;
+
+        #map {
+            height: 60vh;
+        }
+
+        #button {
+            font-size: 1.1rem !important;
+            margin-top: $spacing-small;
+        }
+
+        #logo {
+            display: none;
+        }
+
+        #title {
+            margin: 0 !important;
+        }
+    }
 }

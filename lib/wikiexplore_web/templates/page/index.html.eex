@@ -1,6 +1,6 @@
 <div id="info">
   <h1 id="logo">
-    Explore Wikipedia
+    <a target="_blank" href="https://github.com/ashpil/Wikipedia-Explore-Phoenix">Explore Wikipedia</a>
   </h1>
   <button id="button">
     Get Articles in Area
