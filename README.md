@@ -1,5 +1,10 @@
 # Wikiexplore
 
+## Demo
+
+[**LINK**](https://wikiexplore.herokuapp.com/)
+
+## Phoenix stuff
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
